@@ -1,0 +1,173 @@
+.whyUs {
+  padding: 90px 0 0;
+  background: var(--navy);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header .section-title,
+.whyUs :global(.section-title) {
+  color: white;
+}
+
+.whyUs :global(.tag) {
+  color: var(--green);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--green);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(34, 197, 94, 0.3);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.cardNum {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(34, 197, 94, 0.25);
+  line-height: 1;
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.card:hover .cardNum {
+  color: rgba(34, 197, 94, 0.5);
+}
+
+.cardBody {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.65;
+}
+
+.cardArrow {
+  display: flex;
+  margin-top: 20px;
+  color: var(--green);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.card:hover .cardArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ctaBanner {
+  background: var(--green);
+  border-radius: 14px;
+  padding: 36px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+.ctaText h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.ctaText p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.ctaBanner :global(.btn-primary) {
+  background: var(--navy);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ctaBanner :global(.btn-primary:hover) {
+  background: var(--navy-mid);
+  box-shadow: 0 4px 16px rgba(13, 27, 46, 0.4);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBanner {
+    flex-direction: column;
+    padding: 28px 24px;
+    text-align: center;
+  }
+}
+
+.waveDivider {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: var(--gray-100); /* Matches Projects background */
+  line-height: 0;
+  color: var(--navy); /* Matches WhyUs background */
+  overflow: hidden;
+}
+
+.waveDivider svg {
+  display: block;
+  width: 100%;
+  height: clamp(35px, 6vw, 75px);
+  margin: 0;
+}
