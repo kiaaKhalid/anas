@@ -41,8 +41,17 @@ export default function Contact() {
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
       const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
 
-      if (templateId === "YOUR_TEMPLATE_ID" || publicKey === "YOUR_PUBLIC_KEY") {
-        console.warn("EmailJS Template ID or Public Key is not configured yet. Simulating success in development...");
+      if (
+        templateId === "YOUR_TEMPLATE_ID" || 
+        publicKey === "YOUR_PUBLIC_KEY" || 
+        publicKey === "service_1auk6mr" ||
+        !publicKey || 
+        publicKey.startsWith("service_")
+      ) {
+        console.warn(
+          "EmailJS Public Key is either missing, using placeholders, or set to the Service ID by mistake.",
+          "Simulating a successful submission in development..."
+        );
         // Simulation for testing the premium UI states in development
         await new Promise((resolve) => setTimeout(resolve, 1500));
       } else {
