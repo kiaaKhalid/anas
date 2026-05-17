@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
@@ -50,13 +49,11 @@ export default function Navbar() {
             {/* Logo */}
             <a href="#home" className={styles.logo} id="nav-logo">
               <div className={styles.logoIcon}>
-                <Image
-                  src="/logo.png"
-                  alt="SMEREE Logo"
-                  width={38}
-                  height={38}
-                  style={{ objectFit: "contain" }}
-                />
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="14" cy="14" r="14" fill="#22c55e" />
+                  <path d="M14 6L20 18H8L14 6Z" fill="white" />
+                  <path d="M8 20H20" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                </svg>
               </div>
               <span className={styles.logoText}>
                 SMEREE
