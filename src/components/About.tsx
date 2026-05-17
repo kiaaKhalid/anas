@@ -84,13 +84,13 @@ export default function About() {
 
           {/* Text side */}
           <div className={styles.textSide}>
-            <p className="tag">À Propos de SolarPro</p>
+            <p className="tag">À Propos de SMEREE</p>
             <h2 className={styles.aboutTitle}>
               Créer un Impact Propre<br />
               Pour un Avenir Énergétique Meilleur
             </h2>
             <p className={styles.lead}>
-              Depuis 2004, SolarPro est à la pointe de la révolution des énergies renouvelables.
+              Depuis 2004, SMEREE est à la pointe de la révolution des énergies renouvelables.
               Nous combinons la technologie photovoltaïque de pointe et l&apos;expertise en ingénierie
               pour livrer des installations solaires qui dépassent les attentes et résistent à l&apos;épreuve du temps.
             </p>

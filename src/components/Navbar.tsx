@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
@@ -29,7 +30,7 @@ export default function Navbar() {
         <div className="container">
           <div className={styles.topBarInner}>
             <div className={styles.topInfo}>
-              <span>📧 info@solarpro.ma</span>
+              <span>📧 info@smeree.ma</span>
               <span>📞 +212 665-176718</span>
               <span>🕐 Lun–Ven : 8h00 – 18h00</span>
             </div>
@@ -49,14 +50,16 @@ export default function Navbar() {
             {/* Logo */}
             <a href="#home" className={styles.logo} id="nav-logo">
               <div className={styles.logoIcon}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="14" fill="#22c55e" />
-                  <path d="M14 6L20 18H8L14 6Z" fill="white" />
-                  <path d="M8 20H20" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                </svg>
+                <Image
+                  src="/logo.png"
+                  alt="SMEREE Logo"
+                  width={38}
+                  height={38}
+                  style={{ objectFit: "contain", borderRadius: "50%" }}
+                />
               </div>
               <span className={styles.logoText}>
-                Solar<span>Pro</span>
+                SMEREE
               </span>
             </a>
 

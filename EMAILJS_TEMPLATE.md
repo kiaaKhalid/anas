@@ -1,6 +1,6 @@
-# 📧 Template E-mail Professionnel pour EmailJS - SolarPro
+# 📧 Template E-mail Professionnel pour EmailJS - SMEREE
 
-Ce document contient le template HTML professionnel spécialement conçu pour votre site **SolarPro** à utiliser dans votre tableau de bord **EmailJS**, ainsi que les instructions simples pour l'installer et le connecter.
+Ce document contient le template HTML professionnel spécialement conçu pour votre site **SMEREE** à utiliser dans votre tableau de bord **EmailJS**, ainsi que les instructions simples pour l'installer et le connecter.
 
 ---
 
@@ -9,18 +9,18 @@ Ce document contient le template HTML professionnel spécialement conçu pour vo
 1. Connectez-vous à votre compte [EmailJS](https://dashboard.emailjs.com/).
 2. Allez dans l'onglet **Email Templates** et cliquez sur **Create New Template**.
 3. En haut à droite, cliquez sur **Settings** pour définir :
-   *   **Name :** `SolarPro Consultation Template`
+   *   **Name :** `SMEREE Consultation Template`
    *   **Template ID :** (Notez cet ID, vous en aurez besoin dans le code)
 4. Dans l'onglet **Editor**, définissez les paramètres suivants :
    *   **To Email :** `votre-email@gmail.com` (l'adresse où vous souhaitez recevoir les demandes de devis)
-   *   **From Name :** `SolarPro Formulaire`
-   *   **Subject :** `☀️ Nouveau Devis SolarPro : {{service}} de {{from_name}}`
+   *   **From Name :** `SMEREE Formulaire`
+   *   **Subject :** `☀️ Nouveau Devis SMEREE : {{service}} de {{from_name}}`
 
 ---
 
 ## 🎨 Code HTML du Template Professionnel
 
-Pour obtenir un e-mail au design premium reprenant la charte graphique de **SolarPro** (Bleu marine et Vert solaire), passez l'éditeur EmailJS en mode **HTML / Code Source** (icône `<>` ou bouton "HTML" dans la barre d'outils de l'éditeur) et collez le code suivant :
+Pour obtenir un e-mail au design premium reprenant la charte graphique de **SMEREE** (Bleu marine et Vert solaire), passez l'éditeur EmailJS en mode **HTML / Code Source** (icône `<>` ou bouton "HTML" dans la barre d'outils de l'éditeur) et collez le code suivant :
 
 ```html
 <!DOCTYPE html>
@@ -139,7 +139,7 @@ Pour obtenir un e-mail au design premium reprenant la charte graphique de **Sola
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">Solar<span>Pro</span></div>
+      <div class="logo">SMEREE</div>
     </div>
     <div class="content">
       <h2 class="title">☀️ Nouvelle Demande de Consultation Solaire</h2>
@@ -168,12 +168,12 @@ Pour obtenir un e-mail au design premium reprenant la charte graphique de **Sola
       </div>
       
       <div class="btn-container">
-        <a href="mailto:{{from_email}}?subject=Re: Demande de consultation SolarPro" class="btn">Répondre Directement</a>
+        <a href="mailto:{{from_email}}?subject=Re: Demande de consultation SMEREE" class="btn">Répondre Directement</a>
       </div>
     </div>
     <div class="footer">
-      Cet e-mail de notification vous a été envoyé automatiquement depuis le formulaire de contact de <strong>SolarPro</strong>.<br>
-      © 2026 SolarPro Maroc. Tous droits réservés.
+      Cet e-mail de notification vous a été envoyé automatiquement depuis le formulaire de contact de <strong>SMEREE</strong>.<br>
+      © 2026 SMEREE Maroc. Tous droits réservés.
     </div>
   </div>
 </body>

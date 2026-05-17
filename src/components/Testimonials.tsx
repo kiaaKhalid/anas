@@ -7,7 +7,7 @@ const testimonials = [
     role: "Propriétaire, Lyon",
     rating: 5,
     text:
-      "SolarPro a installé un système de 12 kW chez nous et nous avons réduit notre facture d'électricité de 85 %. L'équipe était professionnelle, propre et a terminé avant le délai prévu. Je recommande vivement !",
+      "SMEREE a installé un système de 12 kW chez nous et nous avons réduit notre facture d'électricité de 85 %. L'équipe était professionnelle, propre et a terminé avant le délai prévu. Je recommande vivement !",
     initials: "MD",
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
     role: "Cheffe d'Entreprise, Bordeaux",
     rating: 5,
     text:
-      "En tant que cheffe d'entreprise, l'analyse de rentabilité fournie par SolarPro était exactement ce dont j'avais besoin. 18 mois après, nous avons déjà récupéré 30 % de notre investissement. Service exceptionnel.",
+      "En tant que cheffe d'entreprise, l'analyse de rentabilité fournie par SMEREE était exactement ce dont j'avais besoin. 18 mois après, nous avons déjà récupéré 30 % de notre investissement. Service exceptionnel.",
     initials: "SM",
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Promoteur Immobilier, Paris",
     rating: 5,
     text:
-      "Nous avons travaillé avec SolarPro sur 12 propriétés commerciales. Leur gestion de projet est irréprochable et la qualité de leurs installations est incomparable.",
+      "Nous avons travaillé avec SMEREE sur 12 propriétés commerciales. Leur gestion de projet est irréprochable et la qualité de leurs installations est incomparable.",
     initials: "DL",
   },
 ];
@@ -49,7 +49,7 @@ export default function Testimonials() {
         <div className={styles.header}>
           <p className="tag">Témoignages Clients</p>
           <h2 className="section-title">
-            Ce Que Disent Nos Clients<br />À Propos de SolarPro
+            Ce Que Disent Nos Clients<br />À Propos de SMEREE
           </h2>
         </div>
 

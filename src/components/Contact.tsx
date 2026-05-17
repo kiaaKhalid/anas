@@ -62,7 +62,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className={styles.contactLabel}>Email</div>
-                  <div className={styles.contactValue}>info@solarpro.ma</div>
+                  <div className={styles.contactValue}>info@smeree.ma</div>
                 </div>
               </div>
 
