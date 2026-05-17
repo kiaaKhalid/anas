@@ -3,6 +3,7 @@ import styles from "./Services.module.css";
 const services = [
   {
     id: "installation",
+    image: "/service_installation.png",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -29,6 +30,7 @@ const services = [
   },
   {
     id: "maintenance",
+    image: "/service_maintenance.png",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="6" width="32" height="36" rx="4" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
@@ -44,6 +46,7 @@ const services = [
   },
   {
     id: "repair",
+    image: "/service_repair.png",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="6" y="10" width="36" height="28" rx="3" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
@@ -59,6 +62,7 @@ const services = [
   },
   {
     id: "consulting",
+    image: "/service_consulting.png",
     icon: (
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="18" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
@@ -98,15 +102,20 @@ export default function Services() {
           <div className={styles.grid}>
             {services.map((svc) => (
               <div key={svc.id} className={styles.card} id={`service-${svc.id}`}>
-                <div className={styles.cardIcon}>{svc.icon}</div>
-                <h3 className={styles.cardTitle}>{svc.title}</h3>
-                <p className={styles.cardDesc}>{svc.description}</p>
-                <a href="#contact" className={styles.cardLink}>
-                  En Savoir Plus
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <div className={styles.imageContainer}>
+                  <img src={svc.image} alt={svc.title} className={styles.cardImage} />
+                  <div className={styles.cardIcon}>{svc.icon}</div>
+                </div>
+                <div className={styles.cardBody}>
+                  <h3 className={styles.cardTitle}>{svc.title}</h3>
+                  <p className={styles.cardDesc}>{svc.description}</p>
+                  <a href="#contact" className={styles.cardLink}>
+                    En Savoir Plus
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
