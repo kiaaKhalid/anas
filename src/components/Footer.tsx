@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 const services = [
@@ -27,11 +28,13 @@ export default function Footer() {
             {/* Brand col */}
             <div className={styles.brandCol}>
               <div className={styles.logo}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                  <circle cx="14" cy="14" r="14" fill="#22c55e" />
-                  <path d="M14 6L20 18H8L14 6Z" fill="white" />
-                  <path d="M8 20H20" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                </svg>
+                <Image
+                  src="/logo.png"
+                  alt="SMEREE Logo"
+                  width={34}
+                  height={34}
+                  style={{ objectFit: "contain" }}
+                />
                 <span>SMEREE</span>
               </div>
               <p className={styles.brandDesc}>
