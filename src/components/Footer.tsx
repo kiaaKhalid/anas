@@ -33,7 +33,7 @@ export default function Footer() {
                   alt="SMEREE Logo"
                   width={34}
                   height={34}
-                  style={{ objectFit: "contain", borderRadius: "50%" }}
+                  style={{ objectFit: "contain" }}
                 />
                 <span>SMEREE</span>
               </div>

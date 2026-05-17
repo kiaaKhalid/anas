@@ -55,7 +55,7 @@ export default function Navbar() {
                   alt="SMEREE Logo"
                   width={38}
                   height={38}
-                  style={{ objectFit: "contain", borderRadius: "50%" }}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <span className={styles.logoText}>
