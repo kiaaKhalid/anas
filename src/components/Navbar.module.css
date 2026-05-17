@@ -38,3 +38,200 @@
   display: flex;
   gap: 10px;
 }
+
+.topSocials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  font-size: 0.75rem;
+  transition: all 0.25s;
+}
+
+.topSocials a:hover {
+  background: var(--green);
+  color: white;
+}
+
+.nav {
+  background: white;
+  padding: 0;
+  box-shadow: 0 2px 20px rgba(13, 27, 46, 0.08);
+  position: relative;
+  overflow: visible;
+}
+
+.scrolled .nav {
+  box-shadow: 0 4px 30px rgba(13, 27, 46, 0.15);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+}
+
+.logoText span {
+  color: var(--green);
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: block;
+  padding: 8px 14px;
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--green);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+  border-radius: 2px;
+}
+
+.navLink:hover {
+  color: var(--green);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobileMenu {
+  background: white;
+  padding: 20px 24px;
+  border-top: 1px solid var(--gray-200);
+  animation: fadeInUp 0.2s ease;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobileMenu ul a {
+  display: block;
+  padding: 12px 0;
+  font-weight: 500;
+  color: var(--navy);
+  border-bottom: 1px solid var(--gray-200);
+  transition: color 0.2s;
+}
+
+.mobileMenu ul a:hover {
+  color: var(--green);
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .topInfo span:not(:first-child) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .topBar {
+    display: none;
+  }
+}
+
+.waveDivider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px; /* Pull it down so it hangs below the nav */
+  width: 100%;
+  height: 30px;
+  line-height: 0;
+  color: white; /* Matches nav background */
+  z-index: 10;
+  pointer-events: none;
+}
+
+.waveDivider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
