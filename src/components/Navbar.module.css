@@ -94,11 +94,12 @@
 .logoText {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--navy);
+  color: #eab308; /* Bright yellow of the solar logo! */
   letter-spacing: -0.5px;
+  transition: color 0.3s;
 }
 
-.logoText span {
+.logoText:hover {
   color: var(--green);
 }
 

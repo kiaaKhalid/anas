@@ -23,7 +23,7 @@
   margin-bottom: 18px;
   font-size: 1.4rem;
   font-weight: 800;
-  color: white;
+  color: #eab308; /* Bright yellow to match navbar logo text! */
 }
 
 .logo span span {
