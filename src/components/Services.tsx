@@ -2,88 +2,74 @@ import styles from "./Services.module.css";
 
 const services = [
   {
-    id: "solar-panels",
+    id: "installation",
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <rect x="4" y="8" width="32" height="24" rx="2" stroke="#22c55e" strokeWidth="2" fill="none" />
-        <line x1="4" y1="16" x2="36" y2="16" stroke="#22c55e" strokeWidth="2" />
-        <line x1="4" y1="24" x2="36" y2="24" stroke="#22c55e" strokeWidth="2" />
-        <line x1="16" y1="8" x2="16" y2="32" stroke="#22c55e" strokeWidth="2" />
-        <line x1="24" y1="8" x2="24" y2="32" stroke="#22c55e" strokeWidth="2" />
-        <line x1="20" y1="32" x2="20" y2="38" stroke="#22c55e" strokeWidth="2" />
-        <line x1="14" y1="38" x2="26" y2="38" stroke="#22c55e" strokeWidth="2" />
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="grad-install" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#22c55e" />
+            <stop offset="1" stopColor="#10b981" />
+          </linearGradient>
+          <linearGradient id="grad-sun" x1="0" y1="0" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#eab308" />
+            <stop offset="1" stopColor="#f59e0b" />
+          </linearGradient>
+        </defs>
+        <rect x="4" y="18" width="40" height="24" rx="4" fill="url(#grad-install)" opacity="0.15" />
+        <path d="M24 4L6 18H42L24 4Z" fill="url(#grad-install)" />
+        <rect x="12" y="22" width="10" height="8" rx="2" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
+        <rect x="26" y="22" width="10" height="8" rx="2" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
+        <path d="M17 22V30M31 22V30" stroke="#22c55e" strokeWidth="1.5" />
+        <circle cx="36" cy="10" r="5" fill="url(#grad-sun)" />
+        <path d="M36 3V7M36 13V17M29 10H33M39 10H43" stroke="#eab308" strokeWidth="2" strokeLinecap="round" />
       </svg>
     ),
-    title: "Installation de Panneaux Solaires",
-    description:
-      "Installation professionnelle de panneaux photovoltaïques haute efficacité pour les particuliers et les entreprises. Systèmes sur mesure pour une production d'énergie maximale.",
-  },
-  {
-    id: "wind-energy",
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <circle cx="20" cy="20" r="3" fill="#22c55e" />
-        <path d="M20 17L18 6C18 4.9 18.9 4 20 4C21.1 4 22 4.9 22 6L20 17Z" fill="#22c55e" />
-        <path d="M22.6 21.5L32 16C32.95 15.45 34.1 15.78 34.66 16.73C35.21 17.68 34.88 18.83 33.93 19.39L22.6 21.5Z" fill="#22c55e" />
-        <path d="M17.4 21.5L7.07 19.39C6.12 18.83 5.79 17.68 6.34 16.73C6.9 15.78 8.05 15.45 9 16L17.4 21.5Z" fill="#22c55e" />
-        <line x1="20" y1="23" x2="20" y2="36" stroke="#22c55e" strokeWidth="2" />
-      </svg>
-    ),
-    title: "Solutions Énergie Éolienne",
-    description:
-      "Services complets d'installation et de maintenance d'éoliennes. Exploitez l'énergie du vent pour compléter votre système solaire et bénéficier d'une énergie propre 24h/24.",
-  },
-  {
-    id: "consulting",
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <path d="M8 32V18L20 8L32 18V32H24V24H16V32H8Z" stroke="#22c55e" strokeWidth="2" fill="none" strokeLinejoin="round" />
-        <circle cx="20" cy="19" r="3" stroke="#22c55e" strokeWidth="2" fill="none" />
-      </svg>
-    ),
-    title: "Conseil en Énergie",
-    description:
-      "Consultation d'experts pour évaluer vos besoins énergétiques, analyser vos habitudes de consommation et concevoir une feuille de route personnalisée en énergie renouvelable.",
-  },
-  {
-    id: "battery-storage",
-    icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <rect x="6" y="12" width="28" height="18" rx="3" stroke="#22c55e" strokeWidth="2" fill="none" />
-        <rect x="34" y="17" width="3" height="8" rx="1.5" fill="#22c55e" />
-        <path d="M18 22L22 16L22 21L26 21L22 27L22 22Z" fill="#22c55e" />
-      </svg>
-    ),
-    title: "Systèmes de Stockage par Batterie",
-    description:
-      "Solutions avancées de stockage d'énergie pour conserver l'excédent solaire et l'utiliser la nuit ou lors de coupures. Indépendance énergétique tout autour du cadran.",
+    title: "Vente et Installation",
+    description: "Revenus principaux générés par la fourniture et la pose de systèmes photovoltaïques. Marge bénéficiaire attractive sur les équipements et la main-d'œuvre qualifiée.",
   },
   {
     id: "maintenance",
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <path d="M32 8L28 12M28 12L20 20M28 12L24 12M28 12L28 16" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" />
-        <path d="M10 28C10 28 14 24 16 22L24 30C22 32 18 36 14 36C11.8 36 10 34.2 10 32C10 30.8 10 28 10 28Z" stroke="#22c55e" strokeWidth="2" fill="none" strokeLinejoin="round" />
-        <circle cx="28" cy="12" r="5" stroke="#22c55e" strokeWidth="2" fill="none" />
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="6" width="32" height="36" rx="4" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
+        <path d="M18 4H30V8H18V4Z" fill="url(#grad-install)" />
+        <circle cx="24" cy="6" r="2" fill="#0d1b2e" />
+        <path d="M16 16H32M16 24H26M16 32H28" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round" />
+        <path d="M28 28L31 31L38 24" stroke="#22c55e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M36 36C36 38.2 34.2 40 32 40H16C13.8 40 12 38.2 12 36" stroke="#22c55e" strokeWidth="2" />
       </svg>
     ),
-    title: "Maintenance & Réparation",
-    description:
-      "Programmes de maintenance complets et services de réparation rapide pour maintenir votre installation solaire à un niveau de performance optimal année après année.",
+    title: "Contrats de Maintenance",
+    description: "Revenus récurrents mensuels ou annuels assurant une prévisibilité financière et un engagement long terme avec nos clients.",
   },
   {
-    id: "monitoring",
+    id: "repair",
     icon: (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-        <rect x="6" y="8" width="28" height="20" rx="2" stroke="#22c55e" strokeWidth="2" fill="none" />
-        <polyline points="12,22 16,16 20,20 24,14 28,18" stroke="#22c55e" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <line x1="14" y1="32" x2="26" y2="32" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" />
-        <line x1="20" y1="28" x2="20" y2="32" stroke="#22c55e" strokeWidth="2" />
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="10" width="36" height="28" rx="3" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
+        <path d="M6 20H42M6 28H42M18 10V38M30 10V38" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
+        <circle cx="24" cy="24" r="8" fill="url(#grad-sun)" opacity="0.2" />
+        <path d="M20 20L28 28M28 20L20 28" stroke="#eab308" strokeWidth="3" strokeLinecap="round" />
+        <path d="M14 34L8 40" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="8" cy="40" r="1.5" fill="#22c55e" />
       </svg>
     ),
-    title: "Supervision Intelligente",
-    description:
-      "Systèmes de surveillance en temps réel avec intégration d'application mobile. Suivez la production, la consommation et les économies d'énergie depuis n'importe où.",
+    title: "Services de Réparation",
+    description: "Interventions ponctuelles pour les pannes ou remplacements de composants, avec tarifs compétitifs et réactivité garantie.",
+  },
+  {
+    id: "consulting",
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="18" stroke="#22c55e" strokeWidth="2.5" fill="#0d1b2e" />
+        <path d="M16 28L22 22L26 26L32 18" stroke="#eab308" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="32" cy="18" r="2.5" fill="#eab308" />
+        <path d="M12 32H36" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round" />
+        <path d="M24 10V14" stroke="#22c55e" strokeWidth="2.5" strokeLinecap="round" />
+      </svg>
+    ),
+    title: "Conseil Technique",
+    description: "Prestations d'expertise pour l'optimisation des installations existantes ou la planification de nouveaux projets solaires.",
   },
 ];
 

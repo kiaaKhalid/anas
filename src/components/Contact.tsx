@@ -190,11 +190,10 @@ export default function Contact() {
                       required
                     >
                       <option value="">Sélectionner un service</option>
-                      <option value="solar">Installation de Panneaux Solaires</option>
-                      <option value="wind">Énergie Éolienne</option>
-                      <option value="battery">Stockage par Batterie</option>
-                      <option value="consulting">Conseil en Énergie</option>
-                      <option value="maintenance">Maintenance & Réparation</option>
+                      <option value="Vente et Installation">Vente et Installation</option>
+                      <option value="Contrats de Maintenance">Contrats de Maintenance</option>
+                      <option value="Services de Réparation">Services de Réparation</option>
+                      <option value="Conseil Technique">Conseil Technique</option>
                     </select>
                   </div>
                 </div>
