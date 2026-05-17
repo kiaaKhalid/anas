@@ -1,0 +1,115 @@
+.projects {
+  padding: 90px 0 0;
+  background: var(--gray-100);
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.imageWrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.imageWrap img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 27, 46, 0.5) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.category {
+  background: var(--green);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+}
+
+.info {
+  padding: 20px 24px;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.waveDivider {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: white; /* Matches Testimonials background */
+  line-height: 0;
+  color: var(--gray-100); /* Matches Projects background */
+  overflow: hidden;
+}
+
+.waveDivider svg {
+  display: block;
+  width: 100%;
+  height: clamp(35px, 6vw, 75px);
+  margin: 0;
+}
