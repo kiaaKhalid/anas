@@ -51,7 +51,7 @@ export default function Navbar() {
             <a href="#home" className={styles.logo} id="nav-logo">
               <div className={styles.logoIcon}>
                 <Image
-                  src="/logo.png"
+                  src="/logo1.png"
                   alt="SMEREE Logo"
                   width={38}
                   height={38}

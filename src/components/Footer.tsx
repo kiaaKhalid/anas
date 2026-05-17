@@ -29,7 +29,7 @@ export default function Footer() {
             <div className={styles.brandCol}>
               <div className={styles.logo}>
                 <Image
-                  src="/logo.png"
+                  src="/logo1.png"
                   alt="SMEREE Logo"
                   width={34}
                   height={34}
