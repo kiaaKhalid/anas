@@ -1,0 +1,215 @@
+.footer {
+  background: var(--navy);
+}
+
+.footerTop {
+  padding: 70px 0 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 40px;
+}
+
+/* Brand column */
+.brandCol {}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: white;
+}
+
+.logo span span {
+  color: var(--green);
+}
+
+.brandDesc {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socialLink {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.socialLink:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Generic columns */
+.col {}
+
+.colTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--green);
+  display: inline-block;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.88rem;
+  transition: all 0.2s;
+}
+
+.list a:hover {
+  color: var(--green);
+  gap: 12px;
+}
+
+/* Newsletter */
+.newsletterText {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  color: white;
+  font-size: 0.88rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.newsletterForm input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.newsletterForm input:focus {
+  border-color: var(--green);
+}
+
+.newsletterForm button {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.newsletterForm button:hover {
+  background: var(--green-dark);
+}
+
+.workHours h5 {
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.workHours p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+/* Footer bottom bar */
+.footerBottom {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footerBottom p {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.82rem;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLinks a {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+
+.bottomLinks a:hover {
+  color: var(--green);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomInner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
