@@ -122,8 +122,9 @@ export default function Contact() {
                   <div className={styles.contactLabel}>Notre Emplacement</div>
                   <div className={styles.contactValue}>Avenue Annakhil, Hay Riad, Rabat, Maroc</div>
                 </div>
+              </div>
             </div>
-            
+
             <a 
               href="https://wa.me/212665176718?text=Bonjour%20SMEREE%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20solutions%20%C3%A9nerg%C3%A9tiques."
               target="_blank"
