@@ -56,8 +56,8 @@ export default function About() {
 
             {/* Experience badge */}
             <div className={styles.expBadge}>
-              <span className={styles.expNum}>20+</span>
-              <span className={styles.expText}>Ans d&apos;Expérience</span>
+              <span className={styles.expNum}>1+</span>
+              <span className={styles.expText}>An d&apos;Expérience</span>
             </div>
 
             {/* Secondary overlapping image (cycles automatically, offset by 1) */}
