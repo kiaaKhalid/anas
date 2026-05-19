@@ -47,7 +47,7 @@ export default function Projects() {
               Nos Dernières<br />Installations Solaires
             </h2>
           </div>
-          <a href="#" className="btn-primary" id="projects-view-all">
+          <a href="#projects" className="btn-primary" id="projects-view-all">
             Voir Tous les Projets
           </a>
         </div>
