@@ -3,30 +3,30 @@ import styles from "./Testimonials.module.css";
 const testimonials = [
   {
     id: "test-1",
-    name: "Michel Dupont",
-    role: "Propriétaire, Lyon",
+    name: "KIAA Khalid",
+    role: "Propriétaire, Casablanca",
     rating: 5,
     text:
       "SMEREE a installé un système de 12 kW chez nous et nous avons réduit notre facture d'électricité de 85 %. L'équipe était professionnelle, propre et a terminé avant le délai prévu. Je recommande vivement !",
-    initials: "MD",
+    initials: "KK",
   },
   {
     id: "test-2",
-    name: "Sophie Martin",
-    role: "Cheffe d'Entreprise, Bordeaux",
+    name: "NAJJARI Abderahmane",
+    role: "Cheffe d'Entreprise, Zzaouiat cheikh",
     rating: 5,
     text:
       "En tant que cheffe d'entreprise, l'analyse de rentabilité fournie par SMEREE était exactement ce dont j'avais besoin. 18 mois après, nous avons déjà récupéré 30 % de notre investissement. Service exceptionnel.",
-    initials: "SM",
+    initials: "NA",
   },
   {
     id: "test-3",
-    name: "David Leblanc",
-    role: "Promoteur Immobilier, Paris",
+    name: "mohamed boujemaa",
+    role: "Promoteur Immobilier, Rabat",
     rating: 5,
     text:
-      "Nous avons travaillé avec SMEREE sur 12 propriétés commerciales. Leur gestion de projet est irréprochable et la qualité de leurs installations est incomparable.",
-    initials: "DL",
+      "SMEREE a installé un système de 12 kW chez nous et nous avons réduit notre facture d'électricité de 85 %. L'équipe était professionnelle, propre et a terminé avant le délai prévu. Je recommande vivement !",
+    initials: "MB",
   },
 ];
 
