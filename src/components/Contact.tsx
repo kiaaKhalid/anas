@@ -61,7 +61,7 @@ export default function Contact() {
       setSubmitted(true);
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
       setTimeout(() => setSubmitted(false), 5000);
-    } catch (error: any) {
+    } catch (error) {
       console.error("EmailJS Error:", error);
       setErrorMsg("Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter par e-mail.");
     } finally {
