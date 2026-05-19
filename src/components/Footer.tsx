@@ -42,9 +42,14 @@ export default function Footer() {
                 Engagé à propulser un avenir durable grâce à des technologies d&apos;énergie propre et renouvelable.
               </p>
               <div className={styles.socials}>
-                {["f", "t", "in", "yt"].map((s) => (
-                  <a key={s} href="#" aria-label={s} className={styles.socialLink}>
-                    {s}
+                {[
+                  { label: "f", url: "https://facebook.com" },
+                  { label: "t", url: "https://twitter.com" },
+                  { label: "in", url: "https://linkedin.com" },
+                  { label: "yt", url: "https://youtube.com" }
+                ].map((s) => (
+                  <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label} className={styles.socialLink}>
+                    {s.label}
                   </a>
                 ))}
               </div>
@@ -120,9 +125,9 @@ export default function Footer() {
           <div className={styles.bottomInner}>
             <p>© {new Date().getFullYear()} SMEREE. Tous droits réservés.</p>
             <div className={styles.bottomLinks}>
-              <a href="#">Politique de Confidentialité</a>
-              <a href="#">Conditions de Service</a>
-              <a href="#">Politique relative aux Cookies</a>
+              <a href="/privacy">Politique de Confidentialité</a>
+              <a href="/terms">Conditions de Service</a>
+              <a href="/cookies">Politique relative aux Cookies</a>
             </div>
           </div>
         </div>

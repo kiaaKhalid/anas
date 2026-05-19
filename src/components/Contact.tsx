@@ -20,7 +20,7 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg("");
@@ -124,22 +124,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            <a 
-              href="https://wa.me/212665176718?text=Bonjour%20SMEREE%2C%20je%20souhaite%20obtenir%20des%20informations%20concernant%20vos%20solutions%20%C3%A9nerg%C3%A9tiques."
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.whatsappContactBtn}
-              id="whatsapp-contact-link"
-            >
-              <img
-                src="/whatsapp.png"
-                alt="WhatsApp"
-                width={20}
-                height={20}
-              />
-              Nous écrire sur WhatsApp
-            </a>
           </div>
 
           {/* Form side */}
@@ -237,7 +221,7 @@ export default function Contact() {
                 >
                   {loading ? (
                     <>
-                      Envoi en cours...
+                      Envoi en cours...{" "}
                       <span className={styles.spinner}></span>
                     </>
                   ) : (

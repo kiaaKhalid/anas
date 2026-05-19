@@ -35,9 +35,9 @@ export default function Navbar() {
               <span>🕐 Lun–Ven : 8h00 – 18h00</span>
             </div>
             <div className={styles.topSocials}>
-              <a href="#" aria-label="Facebook" id="nav-fb">f</a>
-              <a href="#" aria-label="Twitter" id="nav-tw">t</a>
-              <a href="#" aria-label="LinkedIn" id="nav-li">in</a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" id="nav-fb">f</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" id="nav-tw">t</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="nav-li">in</a>
             </div>
           </div>
         </div>

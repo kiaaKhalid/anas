@@ -90,7 +90,7 @@ export default function About() {
               Pour un Avenir Énergétique Meilleur
             </h2>
             <p className={styles.lead}>
-              Depuis 2004, SMEREE est à la pointe de la révolution des énergies renouvelables.
+              Depuis 2026, SMEREE est à la pointe de la révolution des énergies renouvelables.
               Nous combinons la technologie photovoltaïque de pointe et l&apos;expertise en ingénierie
               pour livrer des installations solaires qui dépassent les attentes et résistent à l&apos;épreuve du temps.
             </p>
