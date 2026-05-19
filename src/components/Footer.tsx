@@ -38,7 +38,7 @@ export default function Footer() {
                 <span>SMEREE</span>
               </div>
               <p className={styles.brandDesc}>
-                Premier fournisseur de solutions d&apos;énergie solaire depuis 2004.
+                Premier fournisseur de solutions d&apos;énergie solaire depuis 2026.
                 Engagé à propulser un avenir durable grâce à des technologies d&apos;énergie propre et renouvelable.
               </p>
               <div className={styles.socials}>
