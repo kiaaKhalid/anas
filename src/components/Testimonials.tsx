@@ -13,7 +13,7 @@ const testimonials = [
   {
     id: "test-2",
     name: "NAJJARI Abderahmane",
-    role: "Cheffe d'Entreprise, Zzaouiat cheikh",
+    role: "Cheffe d'Entreprise, Zaouiat Cheikh",
     rating: 5,
     text:
       "En tant que cheffe d'entreprise, l'analyse de rentabilité fournie par SMEREE était exactement ce dont j'avais besoin. 18 mois après, nous avons déjà récupéré 30 % de notre investissement. Service exceptionnel.",
