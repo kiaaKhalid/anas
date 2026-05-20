@@ -26,7 +26,7 @@ const services = [
       </svg>
     ),
     title: "Vente et Installation",
-    description: "Revenus principaux générés par la fourniture et la pose de systèmes photovoltaïques. Marge bénéficiaire attractive sur les équipements et la main-d'œuvre qualifiée.",
+    description: "Nous assurons la vente et l’installation de systèmes d’énergie solaire fiables et performants, adaptés aux besoins des particuliers et des entreprises, avec un accompagnement professionnel et des solutions de qualité.",
   },
   {
     id: "maintenance",
@@ -42,7 +42,7 @@ const services = [
       </svg>
     ),
     title: "Contrats de Maintenance",
-    description: "Revenus récurrents mensuels ou annuels assurant une prévisibilité financière et un engagement long terme avec nos clients.",
+    description: " Nous assurons un service de maintenance préventive et corrective pour garantir le bon fonctionnement et la longévité de vos installations solaires.",
   },
   {
     id: "repair",
@@ -58,7 +58,7 @@ const services = [
       </svg>
     ),
     title: "Services de Réparation",
-    description: "Interventions ponctuelles pour les pannes ou remplacements de composants, avec tarifs compétitifs et réactivité garantie.",
+    description: " Nous intervenons rapidement pour diagnostiquer et réparer les pannes afin d’assurer la continuité et l’efficacité de votre système énergétique.",
   },
   {
     id: "consulting",
@@ -73,7 +73,7 @@ const services = [
       </svg>
     ),
     title: "Conseil Technique",
-    description: "Prestations d'expertise pour l'optimisation des installations existantes ou la planification de nouveaux projets solaires.",
+    description: "Nous accompagnons nos clients avec des conseils techniques et des solutions personnalisées pour optimiser leurs projets d’énergie solaire.",
   },
 ];
 
