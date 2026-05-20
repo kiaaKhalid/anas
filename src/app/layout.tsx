@@ -9,8 +9,16 @@ const inter = Inter({
   display: "swap",
 });
 
+const baseUrl = process.env.NODE_ENV === "development"
+  ? "http://localhost:3000"
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://smeree.ma";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://smeree.ma"),
+  metadataBase: new URL(baseUrl),
   title: "SMEREE – Solutions d'Énergie Renouvelable au Maroc",
   description:
     "SMEREE propose des installations de panneaux solaires de qualité supérieure, des solutions éoliennes et des conseils en efficacité énergétique au Maroc. Contactez-nous pour votre devis gratuit.",
@@ -22,7 +30,7 @@ export const metadata: Metadata = {
     title: "SMEREE – Solutions d'Énergie Renouvelable au Maroc",
     description:
       "SMEREE propose des installations de panneaux solaires de qualité supérieure, des solutions éoliennes et des conseils en efficacité énergétique au Maroc.",
-    url: "https://smeree.ma",
+    url: baseUrl,
     siteName: "SMEREE",
     locale: "fr_FR",
     type: "website",
