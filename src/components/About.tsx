@@ -15,9 +15,9 @@ const features = [
 
 const sliderImages = [
   { src: "/team-photo.png", alt: "Expert technicien solaire" },
-  { src: "/solar-field.png", alt: "Champ de panneaux solaires" },
-  { src: "/house-solar.png", alt: "Maison équipée de panneaux solaires" },
-  { src: "/wind-solar.png", alt: "Éolienne et panneaux solaires" },
+  { src: "/solar-field.jpeg", alt: "Champ de panneaux solaires" },
+  { src: "/house-solar.jpeg", alt: "Maison équipée de panneaux solaires" },
+  { src: "/wind-solar1.jpeg", alt: "Éolienne et panneaux solaires" },
 ];
 
 export default function About() {

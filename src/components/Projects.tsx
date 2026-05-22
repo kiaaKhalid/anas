@@ -1,30 +1,43 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./Projects.module.css";
 
-const projects = [
+interface Project {
+  id: string;
+  image?: string;
+  images?: string[];
+  title: string;
+  category: string;
+  power: string;
+  location: string;
+}
+
+const projects: Project[] = [
   {
     id: "project-1",
-    image: "/solar-field.png",
+    image: "/solar-field.jpeg",
     title: "Ferme Solaire du Désert",
     category: "Commercial",
     power: "2,4 MW",
-    location: "Provence-Alpes-Côte d'Azur",
+    location: "Ouarzazate",
   },
   {
     id: "project-2",
-    image: "/house-solar.png",
+    images: ["/house-solar.jpeg", "/house-solar2.jpeg"],
     title: "Complexe Résidentiel",
     category: "Résidentiel",
     power: "120 kW",
-    location: "Île-de-France",
+    location: "Marrakech",
   },
   {
     id: "project-3",
-    image: "/wind-solar.png",
+    image: "/wind-solar1.jpeg",
     title: "Hybride Éolien & Solaire",
     category: "Système Hybride",
     power: "5,8 MW",
-    location: "Normandie",
+    location: "Tanger",
   },
   {
     id: "project-4",
@@ -32,11 +45,115 @@ const projects = [
     title: "Siège Social d'Entreprise",
     category: "Commercial",
     power: "850 kW",
-    location: "Grand Est",
+    location: "Casablanca",
   },
 ];
 
+const additionalProjects: Project[] = [
+  {
+    id: "project-5",
+    image: "/projet5.jpeg",
+    title: "Centrale Solaire Agricole",
+    category: "Agricole",
+    power: "380 kW",
+    location: "Agadir",
+  },
+  {
+    id: "project-6",
+    image: "/projet6.jpeg",
+    title: "Complexe Hôtelier Éco-Solaire",
+    category: "Commercial",
+    power: "150 kW",
+    location: "Dakhla",
+  },
+];
+
+function ProjectImage({ images, image, title, category }: { images?: string[]; image?: string; title: string; category: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const imgList = images || (image ? [image] : []);
+
+  if (imgList.length === 0) return null;
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev + 1) % imgList.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev - 1 + imgList.length) % imgList.length);
+  };
+
+  return (
+    <div className={styles.imageWrap}>
+      {imgList.map((imgSrc, idx) => (
+        <div
+          key={imgSrc}
+          className={`${styles.imageSlide} ${idx === currentIndex ? styles.activeSlide : ""}`}
+          style={{
+            position: idx === currentIndex ? "relative" : "absolute",
+            width: "100%",
+            height: "100%",
+            top: 0,
+            left: 0,
+            opacity: idx === currentIndex ? 1 : 0,
+            visibility: idx === currentIndex ? "visible" : "hidden",
+            transition: "opacity 0.4s ease-in-out, visibility 0.4s ease-in-out",
+          }}
+        >
+          <Image
+            src={imgSrc}
+            alt={`${title} - Image ${idx + 1}`}
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+      ))}
+      <div className={styles.overlay}>
+        <span className={styles.category}>{category}</span>
+      </div>
+      {imgList.length > 1 && (
+        <>
+          <button
+            className={styles.prevBtn}
+            onClick={prevImage}
+            aria-label="Image précédente"
+          >
+            &#10094;
+          </button>
+          <button
+            className={styles.nextBtn}
+            onClick={nextImage}
+            aria-label="Image suivante"
+          >
+            &#10095;
+          </button>
+          <div className={styles.dots}>
+            {imgList.map((_, idx) => (
+              <span
+                key={idx}
+                className={`${styles.dot} ${idx === currentIndex ? styles.activeDot : ""}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setCurrentIndex(idx);
+                }}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? [...projects, ...additionalProjects] : projects;
+
   return (
     <section className={styles.projects} id="projects">
       <div className="container">
@@ -47,26 +164,25 @@ export default function Projects() {
               Nos Dernières<br />Installations Solaires
             </h2>
           </div>
-          <a href="#projects" className="btn-primary" id="projects-view-all">
-            Voir Tous les Projets
-          </a>
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="btn-primary"
+            id="projects-view-all"
+            style={{ border: "none", cursor: "pointer" }}
+          >
+            {showAll ? "Voir Moins" : "Voir Tous les Projets"}
+          </button>
         </div>
 
         <div className={styles.grid}>
-          {projects.map((p) => (
+          {displayedProjects.map((p) => (
             <div key={p.id} className={styles.card} id={p.id}>
-              <div className={styles.imageWrap}>
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className={styles.overlay}>
-                  <span className={styles.category}>{p.category}</span>
-                </div>
-              </div>
+              <ProjectImage
+                images={p.images}
+                image={p.image}
+                title={p.title}
+                category={p.category}
+              />
               <div className={styles.info}>
                 <h3 className={styles.title}>{p.title}</h3>
                 <div className={styles.meta}>

@@ -6,8 +6,8 @@ import styles from "./Hero.module.css";
 
 const heroImages = [
   "/hero-bg.png",
-  "/solar-field.png",
-  "/wind-solar.png",
+  "/solar-field.jpeg",
+  "/wind-solar1.jpeg",
 ];
 
 export default function Hero() {
