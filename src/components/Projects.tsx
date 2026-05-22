@@ -21,7 +21,7 @@ const projects: Project[] = [
     title: "Ferme Solaire du Désert",
     category: "Commercial",
     power: "2,4 MW",
-    location: "Ouarzazate",
+    location: "Rabat",
   },
   {
     id: "project-2",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     title: "Hybride Éolien & Solaire",
     category: "Système Hybride",
     power: "5,8 MW",
-    location: "Tanger",
+    location: "Meknès",
   },
   {
     id: "project-4",
@@ -56,7 +56,7 @@ const additionalProjects: Project[] = [
     title: "Centrale Solaire Agricole",
     category: "Agricole",
     power: "380 kW",
-    location: "Agadir",
+    location: "Kénitra",
   },
   {
     id: "project-6",
@@ -64,7 +64,7 @@ const additionalProjects: Project[] = [
     title: "Complexe Hôtelier Éco-Solaire",
     category: "Commercial",
     power: "150 kW",
-    location: "Dakhla",
+    location: "Casablanca",
   },
 ];
 
